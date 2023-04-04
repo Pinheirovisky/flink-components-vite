@@ -1,6 +1,6 @@
 {
   "name": "flink-components",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "description": "Library Components of FLINK-FRONT-END",
   "type": "module",
