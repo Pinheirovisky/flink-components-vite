@@ -2,18 +2,21 @@ import "@testing-library/jest-dom";
 
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
+import { MemoryRouter } from "react-router-dom";
 
 import Pagination from "./Pagination";
 
 const createSut = (currentPage: number, total: number) => {
   const renderComp = () =>
     render(
-      <Pagination
-        theme="light"
-        currentPage={currentPage}
-        total={total}
-        clearData={() => ""}
-      />,
+      <MemoryRouter initialEntries={["/"]}>
+        <Pagination
+          theme="light"
+          currentPage={currentPage}
+          total={total}
+          clearData={() => ""}
+        />
+      </MemoryRouter>,
     );
 
   return { renderComp };

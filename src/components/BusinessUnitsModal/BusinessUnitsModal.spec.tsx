@@ -3,20 +3,23 @@ import "@testing-library/jest-dom";
 import { mockCommercialPortfolio } from "@mocks";
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
+import { MemoryRouter } from "react-router-dom";
 
 import { BusinessUnitsModal } from "./index";
 
 const createSut = (onClose: () => void) => {
   const renderComp = () =>
     render(
-      <BusinessUnitsModal
-        theme="light"
-        getItemCommercialPortfolioRequest={jest.fn}
-        modalLoading={false}
-        searchedItem={mockCommercialPortfolio}
-        onClose={onClose}
-        id="0"
-      />,
+      <MemoryRouter initialEntries={["/"]}>
+        <BusinessUnitsModal
+          theme="light"
+          getItemCommercialPortfolioRequest={jest.fn}
+          modalLoading={false}
+          searchedItem={mockCommercialPortfolio}
+          onClose={onClose}
+          id="0"
+        />
+      </MemoryRouter>,
     );
 
   return { renderComp };

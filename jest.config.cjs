@@ -1,0 +1,35 @@
+module.exports = {
+  roots: ["<rootDir>"],
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
+  transform: {
+    "^.+\\.ts?$": "ts-jest",
+    "^.+\\.jsx?$": "babel-jest",
+  },
+  modulePaths: ["<rootDir>/src/"],
+  moduleDirectories: ["node_modules", "src"],
+  collectCoverage: true,
+  clearMocks: true,
+  coverageDirectory: "coverage",
+  moduleNameMapper: {
+    ".(css|less|scss)$": "identity-obj-proxy",
+    "^@components(.*)$": "<rootDir>/src/components$1",
+    "^@middlewares(.*)$": "<rootDir>/src/middlewares$1",
+    "^@mocks(.*)$": "<rootDir>/src/mocks$1",
+    "^@protocols(.*)$": "<rootDir>/src/protocols$1",
+    "^@styles(.*)$": "<rootDir>/src/styles$1",
+    "^@themes(.*)$": "<rootDir>/src/themes$1",
+    "^@utils(.*)$": "<rootDir>/src/utils$1",
+  },
+  coverageThreshold: {
+    global: {
+      branches: 0,
+      functions: 0,
+      lines: 0,
+      statements: 0,
+    },
+  },
+  setupFilesAfterEnv: ["@testing-library/jest-dom"],
+  verbose: true,
+  testTimeout: 20000,
+};
