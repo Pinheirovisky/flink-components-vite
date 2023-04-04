@@ -1,13 +1,11 @@
-import React, { useEffect, useMemo } from "react";
-import { useHistory } from "react-router-dom";
-
+import { IconListFilled, IconNext, IconNextInitial } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
+import { buildValidQueryParam } from "@utils";
 import classnames from "classnames";
 import { useFormik } from "formik";
-import { ThemeMiddleware } from "middlewares";
-import { buildValidQueryParam } from "utils";
+import React, { useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-
-import { IconNextInitial, IconNext, IconListFilled } from "components/Icons";
 
 import Wrapper, { Form } from "./Pagination.styles";
 
@@ -32,7 +30,7 @@ const Pagination: React.FC<Props> = ({
   uiClasses = "",
   theme,
 }: Props) => {
-  const { push } = useHistory();
+  const navigate = useNavigate();
 
   const initialValues = {
     page: currentPage,
@@ -50,7 +48,7 @@ const Pagination: React.FC<Props> = ({
 
   // ? Change page on URL query param:
   const changeUrlPage = (page: string) => {
-    push({
+    navigate({
       pathname: location.pathname,
       search:
         "?" +

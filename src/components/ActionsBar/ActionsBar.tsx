@@ -1,4 +1,4 @@
-import { ThemeMiddleware } from "middlewares";
+import { ThemeMiddleware } from "@middlewares";
 import React from "react";
 
 import { Button, MainBar } from "./ActionsBar.styles";

@@ -117,11 +117,11 @@ const Fieldvalue = styled.p`
 export default Wrapper;
 export {
   Content,
-  List,
-  ListGroups,
-  Footer,
-  ItemGroup,
-  Item,
   Fieldname,
   Fieldvalue,
+  Footer,
+  Item,
+  ItemGroup,
+  List,
+  ListGroups,
 };

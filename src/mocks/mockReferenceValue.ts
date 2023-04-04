@@ -1,4 +1,4 @@
-import { ReferenceValueProps } from "protocols/referenceValue";
+import { ReferenceValueProps } from "@protocols/referenceValue";
 
 const mockReferenceValue: ReferenceValueProps = {
   ferrovia: "ALLP",

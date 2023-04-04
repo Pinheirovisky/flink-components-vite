@@ -1,9 +1,8 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import React from "react";
-
 import "@testing-library/jest-dom";
 
-import { ComplementFieldType } from "protocols/table";
+import { ComplementFieldType } from "@protocols/table";
+import { fireEvent,render, screen } from "@testing-library/react";
+import React from "react";
 
 import { AddToList } from "./index";
 

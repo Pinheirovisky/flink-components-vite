@@ -1,6 +1,5 @@
+import { ThemeMiddleware } from "@middlewares";
 import React from "react";
-
-import { ThemeMiddleware } from "middlewares";
 
 // styles
 import Wrapper, { Content } from "./Loading.styles";

@@ -1,9 +1,8 @@
 import { render, screen } from "@testing-library/react";
+import { lightMain } from "@themes/main";
 import React from "react";
-
 // Theme:
 import { ThemeProvider } from "styled-components";
-import { lightMain } from "themes/main";
 
 import IconNext from "./IconNext";
 

@@ -1,11 +1,8 @@
+import { Loading, Modal } from "@components";
+import { IconNext } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
+import { Customers } from "@protocols/customers";
 import React, { useEffect, useState } from "react";
-
-import { ThemeMiddleware } from "middlewares";
-
-import { Customers } from "protocols/customers";
-
-import { Loading, Modal } from "components";
-import { IconNext } from "components/Icons";
 
 import Wrapper, {
   Content,

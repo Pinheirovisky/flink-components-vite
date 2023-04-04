@@ -1,9 +1,8 @@
 import { render, screen } from "@testing-library/react";
+import { lightMain } from "@themes/main";
 import React from "react";
-
 // Theme:
 import { ThemeProvider } from "styled-components";
-import { lightMain } from "themes/main";
 
 import IconClose from "./IconClose";
 
@@ -11,7 +10,7 @@ const createSut = (title: string) => {
   const renderComp = () =>
     render(
       <ThemeProvider theme={lightMain}>
-        <IconClose title={title} />
+        <IconClose theme="light" title={title} />
       </ThemeProvider>,
     );
 

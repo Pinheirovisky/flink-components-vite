@@ -1,8 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { lightMain } from "@themes/main";
 import React from "react";
-
 import { ThemeProvider } from "styled-components";
-import { lightMain } from "themes/main";
 
 import IconDownArrow from "./IconDownArrow";
 

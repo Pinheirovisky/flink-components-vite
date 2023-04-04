@@ -1,9 +1,7 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComplementFieldType } from "@protocols/table";
+import { ComponentMeta,ComponentStory } from "@storybook/react";
 import React from "react";
-
 import { ThemeProvider } from "styled-components";
-
-import { ComplementFieldType } from "protocols/table";
 
 import { darkMain, lightMain } from "../../themes/main";
 import AddToList from "./AddToList";

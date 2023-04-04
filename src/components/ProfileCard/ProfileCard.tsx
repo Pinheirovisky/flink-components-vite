@@ -1,13 +1,11 @@
-import React from "react";
-
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { IconChevron } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
+import { AccountCircle } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
+import { lightMain } from "@themes/main";
+import { clearLocalStorage } from "@utils";
 import classnames from "classnames";
-import { ThemeMiddleware } from "middlewares";
-import { lightMain } from "themes/main";
-import { clearLocalStorage } from "utils";
-
-import { IconChevron } from "components/Icons";
+import React from "react";
 
 import Wrapper, {
   AvatarGroup,
@@ -71,7 +69,7 @@ const ProfileCard: React.FC<Props> = ({
               <IconChevron color={isCurrentTheme} />
             </>
           ) : (
-            <AccountCircleIcon color="primary" className="avatar" />
+            <AccountCircle color="primary" className="avatar" />
           )}
         </ProfileInfo>
 

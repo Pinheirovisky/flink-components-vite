@@ -1,9 +1,6 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { mockCommercialPortfolio } from "@mocks";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Router } from "react-router";
-
-import { createMemoryHistory } from "history";
-import { mockCommercialPortfolio } from "mocks";
 
 import BusinessUnitsModal from "./BusinessUnitsModal";
 
@@ -13,13 +10,9 @@ export default {
   component: BusinessUnitsModal,
 } as ComponentMeta<typeof BusinessUnitsModal>;
 
-const history = createMemoryHistory();
-
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const TemplateLight: ComponentStory<typeof BusinessUnitsModal> = (args) => (
-  <Router history={history}>
-    <BusinessUnitsModal {...args} />
-  </Router>
+  <BusinessUnitsModal {...args} />
 );
 
 export const Light = TemplateLight.bind({});

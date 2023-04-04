@@ -1,16 +1,12 @@
-import React from "react";
-
-// Utils:
-import { getReadableItem } from "utils";
-
-import { Customers } from "store/ducks/customers/types";
-
 import {
   Fieldname,
   Fieldvalue,
   Item,
-} from "components/ClientDetailsModal/ClientDetailsModal.styles";
-
+} from "@components/ClientDetailsModal/ClientDetailsModal.styles";
+import { Customers } from "@protocols/customers";
+// Utils:
+import { getReadableItem } from "@utils";
+import React from "react";
 interface OptionalReportsDataProps {
   customerData: Customers;
 }

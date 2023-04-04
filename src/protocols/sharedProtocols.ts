@@ -1,3 +1,6 @@
+import { NatureOfOperation } from "./natureOfOperation";
+import { PaymentConditions } from "./paymentConditions";
+
 export interface GetListResponse<T> {
   content: Array<T>;
   pageable: {
@@ -25,4 +28,16 @@ export interface GetListResponse<T> {
   first: boolean;
   numberOfElements: number;
   empty: boolean;
+}
+
+export interface DefaultTableData {
+  rowIndex: number;
+}
+
+export interface GetListResponseConditionPayments {
+  CondicaoPagamento: Array<PaymentConditions>;
+}
+
+export interface GetListResponseNatureOfOperation {
+  NaturezaOperacao: Array<NatureOfOperation>;
 }

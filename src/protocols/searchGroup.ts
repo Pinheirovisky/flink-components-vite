@@ -1,18 +1,17 @@
-import { CommercialPortfolioTable } from "store/ducks/commercialPortfolio/types";
-import { CommodityTable } from "store/ducks/commodity/types";
-import { MaintainServicesTable } from "store/ducks/maintainServices/types";
-import { MicroregionTable } from "store/ducks/microregion/types";
-import { NatureOfOperation } from "store/ducks/natureOfOperation/types";
-import { PaymentConditions } from "store/ducks/paymentConditions/types";
-import { Places } from "store/ducks/places/types";
-import { ProductsTable } from "store/ducks/products/types";
-import { RailSiteTable } from "store/ducks/railSite/types";
-import { RailwayComplementTable } from "store/ducks/railwayComplement/types";
+import { CommercialPortfolioTable } from "./commercialPortfolio";
+import { CommodityTable } from "./commodity";
+import { MaintainServicesTable } from "./maintainServices";
+import { MicroregionTable } from "./microregion";
+import { PaymentConditions } from "./paymentConditions";
+import { Places } from "./places";
+import { ProductsTable } from "./products";
+import { RailSiteTable } from "./railSite";
+import { RailwayComplementTable } from "./railwayComplement";
 import {
   GetListResponse,
   GetListResponseConditionPayments,
   GetListResponseNatureOfOperation,
-} from "store/ducks/sharedProtocols";
+} from "./sharedProtocols";
 
 export type ColumnOneProps = "Código" | "Cidade" | "Descrição" | "UF";
 
@@ -37,17 +36,15 @@ export type DataProps =
   | GetListResponse<MicroregionTable>
   | GetListResponse<PaymentConditions>
   | GetListResponse<Places>
-  | GetListResponse<Places>
   | GetListResponse<ProductsTable>
   | GetListResponse<RailSiteTable>
   | GetListResponse<RailwayComplementTable>
-  | GetListResponse<MaintainServicesTable>
   | GetListResponse<CommodityTable>
   | null;
 
 export type DataNoPaginationProps =
-  | GetListResponseConditionPayments<PaymentConditions>
-  | GetListResponseNatureOfOperation<NatureOfOperation>
+  | GetListResponseConditionPayments
+  | GetListResponseNatureOfOperation
   | null;
 
 export type FieldToGetItProps =

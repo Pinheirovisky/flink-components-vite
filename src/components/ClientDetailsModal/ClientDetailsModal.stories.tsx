@@ -1,7 +1,6 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { mockCustomer } from "@mocks";
+import { ComponentMeta,ComponentStory } from "@storybook/react";
 import React from "react";
-
-import { mockCustomer } from "mocks";
 
 import ClientDetailsModal from "./ClientDetailsModal";
 

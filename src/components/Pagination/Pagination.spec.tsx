@@ -1,27 +1,19 @@
-/* eslint-disable import-helpers/order-imports */
-import { render, screen, fireEvent } from "@testing-library/react";
-import React from "react";
 import "@testing-library/jest-dom";
 
-import { Router } from "react-router";
-
-import { createMemoryHistory } from "history";
+import { fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 
 import Pagination from "./Pagination";
 
 const createSut = (currentPage: number, total: number) => {
-  const history = createMemoryHistory();
-
   const renderComp = () =>
     render(
-      <Router history={history}>
-        <Pagination
-          theme="light"
-          currentPage={currentPage}
-          total={total}
-          clearData={() => ""}
-        />
-      </Router>,
+      <Pagination
+        theme="light"
+        currentPage={currentPage}
+        total={total}
+        clearData={() => ""}
+      />,
     );
 
   return { renderComp };

@@ -1,8 +1,5 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Router } from "react-router";
-
-import { createMemoryHistory } from "history";
 
 import Pagination from "./Pagination";
 
@@ -12,38 +9,32 @@ export default {
   component: Pagination,
 } as ComponentMeta<typeof Pagination>;
 
-const history = createMemoryHistory();
-
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const TemplateLight: ComponentStory<typeof Pagination> = (args) => (
-  <Router history={history}>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        height: "200px",
-        width: "80%",
-      }}
-    >
-      <Pagination {...args} />
-    </div>
-  </Router>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      height: "200px",
+      width: "80%",
+    }}
+  >
+    <Pagination {...args} />
+  </div>
 );
 
 const TemplateDark: ComponentStory<typeof Pagination> = (args) => (
-  <Router history={history}>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        height: "200px",
-        width: "80%",
-        background: "#4B5262",
-      }}
-    >
-      <Pagination {...args} />
-    </div>
-  </Router>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      height: "200px",
+      width: "80%",
+      background: "#4B5262",
+    }}
+  >
+    <Pagination {...args} />
+  </div>
 );
 
 export const Light = TemplateLight.bind({});

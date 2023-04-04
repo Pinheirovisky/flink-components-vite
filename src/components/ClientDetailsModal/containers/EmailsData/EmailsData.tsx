@@ -1,15 +1,12 @@
-import React from "react";
-
-import { getReadableItem } from "utils";
-
-import { Customers } from "protocols/customers";
-
 import {
   Fieldname,
   Fieldvalue,
   Item,
   ItemGroup,
-} from "components/ClientDetailsModal/ClientDetailsModal.styles";
+} from "@components/ClientDetailsModal/ClientDetailsModal.styles";
+import { Customers } from "@protocols/customers";
+import { getReadableItem } from "@utils";
+import React from "react";
 
 interface EmailsDataProps {
   customerData: Customers;

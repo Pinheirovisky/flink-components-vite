@@ -1,8 +1,7 @@
+import { IconChevronFilled, IconMinus } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
+import { decideToIncludeOrDelete } from "@utils";
 import React, { useCallback, useEffect, useState } from "react";
-
-import { decideToIncludeOrDelete } from "utils";
-
-import { IconChevronFilled, IconMinus } from "components/Icons";
 
 import Wrapper, {
   ColumnMap,
@@ -11,7 +10,6 @@ import Wrapper, {
   Main,
   Row,
 } from "./CheckboxGroup.styles";
-import { ThemeMiddleware } from "middlewares";
 
 interface CitiesProps {
   id: string;

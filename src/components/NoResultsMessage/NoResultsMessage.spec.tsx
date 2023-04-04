@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
-import React from "react";
 import "@testing-library/jest-dom";
 
+import { render, screen } from "@testing-library/react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
 
 import { lightMain } from "../../themes/main";
@@ -11,7 +11,7 @@ const createSut = (isComponentSearch: boolean) => {
   const renderComp = () =>
     render(
       <ThemeProvider theme={lightMain}>
-        <NoResultsMessage isComponentSearch={isComponentSearch} />
+        <NoResultsMessage theme="light" isComponentSearch={isComponentSearch} />
       </ThemeProvider>,
     );
 

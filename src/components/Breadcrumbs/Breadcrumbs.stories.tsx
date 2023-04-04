@@ -1,8 +1,5 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Router } from "react-router-dom";
-
-import { createMemoryHistory } from "history";
 
 import Breadcrumbs from "./Breadcrumbs";
 
@@ -12,35 +9,29 @@ export default {
   component: Breadcrumbs,
 } as ComponentMeta<typeof Breadcrumbs>;
 
-const history = createMemoryHistory();
-
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const TemplateLight: ComponentStory<typeof Breadcrumbs> = (args) => (
-  <Router history={history}>
-    <div
-      style={{
-        display: "flex",
-        height: "200px",
-        width: "80%",
-      }}
-    >
-      <Breadcrumbs {...args} />
-    </div>
-  </Router>
+  <div
+    style={{
+      display: "flex",
+      height: "200px",
+      width: "80%",
+    }}
+  >
+    <Breadcrumbs {...args} />
+  </div>
 );
 const TemplateDark: ComponentStory<typeof Breadcrumbs> = (args) => (
-  <Router history={history}>
-    <div
-      style={{
-        display: "flex",
-        height: "200px",
-        width: "80%",
-        background: "#4B5262",
-      }}
-    >
-      <Breadcrumbs {...args} />
-    </div>
-  </Router>
+  <div
+    style={{
+      display: "flex",
+      height: "200px",
+      width: "80%",
+      background: "#4B5262",
+    }}
+  >
+    <Breadcrumbs {...args} />
+  </div>
 );
 
 const paths = [

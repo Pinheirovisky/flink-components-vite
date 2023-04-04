@@ -1,29 +1,23 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { render, screen, fireEvent } from "@testing-library/react";
-import React from "react";
 import "@testing-library/jest-dom";
-import { Router } from "react-router";
 
-import { createMemoryHistory } from "history";
-import { mockCustomer } from "mocks";
+import { mockCustomer } from "@mocks";
+import { fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 
 import { ClientDetailsModal } from "./index";
 
 const createSut = (onClose: () => void, id: string) => {
-  const history = createMemoryHistory();
-
   const renderComp = () =>
     render(
-      <Router history={history}>
-        <ClientDetailsModal
-          getCustomersItemRequest={jest.fn}
-          modalLoading={false}
-          searchedItem={mockCustomer}
-          theme="light"
-          id={id}
-          onClose={onClose}
-        />
-      </Router>,
+      <ClientDetailsModal
+        getCustomersItemRequest={jest.fn}
+        modalLoading={false}
+        searchedItem={mockCustomer}
+        theme="light"
+        id={id}
+        onClose={onClose}
+      />,
     );
 
   return { renderComp };

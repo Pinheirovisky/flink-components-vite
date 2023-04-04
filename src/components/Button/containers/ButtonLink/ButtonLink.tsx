@@ -1,7 +1,6 @@
+import { Props } from "@components/Button/Button";
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { Props } from "components/Button/Button";
 
 type ButtonLinkProps = Pick<
   Props,

@@ -1,24 +1,17 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import { Router } from "react-router-dom";
-
-import { createMemoryHistory } from "history";
 
 import { ProfileCard } from "./index";
 
 const createSut = (isOpen: boolean) => {
-  const history = createMemoryHistory();
-
   const renderComp = () =>
     render(
-      <Router history={history}>
-        <ProfileCard
-          name="Dev front-end"
-          isOpen={isOpen}
-          theme="light"
-          logoutUrl=""
-        />
-      </Router>,
+      <ProfileCard
+        name="Dev front-end"
+        isOpen={isOpen}
+        theme="light"
+        logoutUrl=""
+      />,
     );
 
   return { renderComp };

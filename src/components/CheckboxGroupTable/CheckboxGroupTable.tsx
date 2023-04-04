@@ -1,9 +1,7 @@
+import { IconChevronFilled, IconMinus } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
+import { decideToIncludeOrDelete } from "@utils";
 import React, { useCallback, useEffect, useState } from "react";
-
-import { ThemeMiddleware } from "middlewares";
-import { decideToIncludeOrDelete } from "utils";
-
-import { IconChevronFilled, IconMinus } from "components/Icons";
 
 import Wrapper, {
   ColumnMap,

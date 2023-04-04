@@ -1,20 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
-import { Router } from "react-router";
-
-import { createMemoryHistory } from "history";
 
 import { Breadcrumbs } from "./index";
 
 const createSut = (paths: { label: string; url: string }[]) => {
-  const history = createMemoryHistory();
-
-  const renderComp = () =>
-    render(
-      <Router history={history}>
-        <Breadcrumbs theme="light" paths={paths} />
-      </Router>,
-    );
+  const renderComp = () => render(<Breadcrumbs theme="light" paths={paths} />);
 
   return { renderComp };
 };

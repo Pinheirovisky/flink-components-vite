@@ -11,6 +11,15 @@ export interface CommercialPortfolio {
   ativo: string;
 }
 
+export type CommercialPortfolioTable = Omit<
+  CommercialPortfolio,
+  "responsavel" | "ativo"
+> & {
+  ativo: string;
+  responsavel: string;
+  responsavelId: string;
+};
+
 export interface CommercialPortfolioSearchedItem extends CommercialPortfolio {
   unidadesNegocio: {
     id: number;

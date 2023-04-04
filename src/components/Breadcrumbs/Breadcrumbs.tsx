@@ -1,12 +1,9 @@
+import { IconChevronFilled } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
 import React from "react";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import { createMemoryHistory } from "history";
-import { ThemeMiddleware } from "middlewares";
-
-import { IconChevronFilled } from "components/Icons";
-
-import { Wrapper, BreadcrumbItem } from "./Breadcrumbs.styles";
+import { BreadcrumbItem, Wrapper } from "./Breadcrumbs.styles";
 
 export interface Props {
   paths: { label: string; url?: string }[];
@@ -21,29 +18,26 @@ const Breadcrumbs: React.FC<Props> = ({
 }: Props) => {
   const isCurrentTheme = theme === "light" ? "#596073" : "#FFF";
 
-  const history = createMemoryHistory();
-
   return (
-    <Router history={history}>
-      <ThemeMiddleware theme={theme}>
-        <Wrapper data-testid="breadcrumbs-component" className={uiClasses}>
-          <BreadcrumbItem>
+    <ThemeMiddleware theme={theme}>
+      <Wrapper data-testid="breadcrumbs-component" className={uiClasses}>
+        <BreadcrumbItem>
+          <button onClick={() => (window.location.href = "/")}>
+            <p>Página inicial</p>
+          </button>
+          <IconChevronFilled theme={theme} color={isCurrentTheme} />
+        </BreadcrumbItem>
+        {paths.map((path, key) => (
+          <BreadcrumbItem key={`breadcrumb-item-${path.label}`}>
             <button onClick={() => (window.location.href = "/")}>
-              <p>Página inicial</p>
+              <p>{path.label}</p>
             </button>
-            <IconChevronFilled theme={theme} color={isCurrentTheme} />
+            {key + 1 !== paths.length && (
+              <IconChevronFilled theme={theme} color={isCurrentTheme} />
+            )}
           </BreadcrumbItem>
-          {paths.map((path, key) => (
-            <BreadcrumbItem key={`breadcrumb-item-${path.label}`}>
-              <button onClick={() => (window.location.href = "/")}>
-                <p>{path.label}</p>
-              </button>
-              {key + 1 !== paths.length && (
-                <IconChevronFilled theme={theme} color={isCurrentTheme} />
-              )}
-            </BreadcrumbItem>
-          ))}
-          {/* {paths.map((path, key) =>
+        ))}
+        {/* {paths.map((path, key) =>
             path.url ? (
               <BreadcrumbItem key={`breadcrumb-item-${path.label}`}>
                 <Link to={path.url}>{path.label}</Link>
@@ -60,9 +54,8 @@ const Breadcrumbs: React.FC<Props> = ({
               </BreadcrumbItem>
             ),
           )} */}
-        </Wrapper>
-      </ThemeMiddleware>
-    </Router>
+      </Wrapper>
+    </ThemeMiddleware>
   );
 };
 

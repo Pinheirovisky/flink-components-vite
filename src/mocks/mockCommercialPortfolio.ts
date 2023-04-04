@@ -1,4 +1,4 @@
-import { CommercialPortfolioSearchedItem } from "protocols/commercialPortfolio";
+import { CommercialPortfolioSearchedItem } from "@protocols/commercialPortfolio";
 
 const mockCommercialPortfolio: CommercialPortfolioSearchedItem = {
   id: 17,

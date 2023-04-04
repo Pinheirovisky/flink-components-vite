@@ -1,8 +1,6 @@
+import { IconNoResults } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
 import React from "react";
-
-import { ThemeMiddleware } from "middlewares";
-
-import { IconNoResults } from "components/Icons";
 
 import {
   ImageHolder,

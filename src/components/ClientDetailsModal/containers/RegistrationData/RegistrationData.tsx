@@ -1,12 +1,10 @@
-import React from "react";
-
-import { Customers } from "store/ducks/customers/types";
-
 import {
   Fieldname,
   Fieldvalue,
   Item,
-} from "components/ClientDetailsModal/ClientDetailsModal.styles";
+} from "@components/ClientDetailsModal/ClientDetailsModal.styles";
+import { Customers } from "@protocols/customers";
+import React from "react";
 
 interface RegistrationDataProps {
   customerData: Customers;

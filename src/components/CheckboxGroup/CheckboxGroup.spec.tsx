@@ -1,9 +1,7 @@
+import { mockCities } from "@mocks";
+import { CitiesProps } from "@protocols/places";
 import { render } from "@testing-library/react";
 import React from "react";
-
-import { mockCities } from "mocks";
-
-import { CitiesProps } from "protocols/places";
 
 import { CheckboxGroup } from "./index";
 

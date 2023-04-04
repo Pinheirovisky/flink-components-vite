@@ -1,7 +1,6 @@
+import { darkMain, lightMain } from "@themes/main";
 import React from "react";
-
 import { ThemeProvider } from "styled-components";
-import { darkMain, lightMain } from "themes/main";
 
 export interface ThemeMiddlewareProps {
   theme: "light" | "dark";

@@ -1,11 +1,9 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-
+import { ThemeMiddleware } from "@middlewares";
 import { TextField } from "@mui/material";
+import { Places, PlacesByUF } from "@protocols/places";
+import { getCookie } from "@utils";
 import _ from "lodash";
-import { ThemeMiddleware } from "middlewares";
-import { getCookie } from "utils";
-
-import { Places, PlacesByUF } from "protocols/places";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 import Wrapper from "./AutoCompleteInput.styles";
 

@@ -1,7 +1,7 @@
-// Interface:
-import { FormalizationModal } from "store/ducks/formalization/types";
-import { GetListResponse } from "store/ducks/sharedProtocols";
+import { FormalizationModal } from "@protocols/formalization";
+import { GetListResponse } from "@protocols/sharedProtocols";
 
+// Interface:
 const mockFormalization: GetListResponse<FormalizationModal> = {
   content: [
     {
@@ -9,6 +9,8 @@ const mockFormalization: GetListResponse<FormalizationModal> = {
       nomeFormalizacao: "CONTRATO 01",
       numeroFormalizacao: "4109",
       statusContrato: "PRE-CADASTRO",
+      contratada: "VLI",
+      contratoAssociado: 5500,
     },
   ],
   empty: false,

@@ -1,9 +1,7 @@
-import React from "react";
-
+import { IconClose } from "@components/Icons";
+import { ThemeMiddleware } from "@middlewares";
 import classnames from "classnames";
-import { ThemeMiddleware } from "middlewares";
-
-import { IconClose } from "components/Icons";
+import React from "react";
 
 // styles
 import Wrapper, { Content, customStyles } from "./Modal.styles";

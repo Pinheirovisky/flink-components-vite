@@ -67,4 +67,4 @@ const Item = styled.div`
 `;
 
 export default Wrapper;
-export { Header, Main, ColumnMap, Row, Item };
+export { ColumnMap, Header, Item,Main, Row };

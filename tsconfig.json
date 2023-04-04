@@ -19,7 +19,21 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "react-vite-library": ["src/component/index.ts"]
+      "react-vite-library": ["src/component/index.ts"],
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@middlewares": ["src/middlewares"],
+      "@mocks/*": ["src/mocks/*"],
+      "@mocks": ["src/mocks"],
+      "@protocols/*": ["src/protocols/*"],
+      "@protocols": ["src/protocols"],
+      "@styles/*": ["src/styles/*"],
+      "@styles": ["src/styles"],
+      "@themes/*": ["src/themes/*"],
+      "@themes": ["src/themes"],
+      "@utils/*": ["src/utils/*"],
+      "@utils": ["src/utils"]
     },
     "typeRoots": ["node_modules/@types", "src/component/index.d.ts"]
   },

@@ -1,29 +1,22 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import React from "react";
-
 import "@testing-library/jest-dom";
 
-import { Router } from "react-router";
-
-import { createMemoryHistory } from "history";
-import { mockCommercialPortfolio } from "mocks";
+import { mockCommercialPortfolio } from "@mocks";
+import { fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 
 import { BusinessUnitsModal } from "./index";
 
 const createSut = (onClose: () => void) => {
-  const history = createMemoryHistory();
   const renderComp = () =>
     render(
-      <Router history={history}>
-        <BusinessUnitsModal
-          theme="light"
-          getItemCommercialPortfolioRequest={jest.fn}
-          modalLoading={false}
-          searchedItem={mockCommercialPortfolio}
-          onClose={onClose}
-          id="0"
-        />
-      </Router>,
+      <BusinessUnitsModal
+        theme="light"
+        getItemCommercialPortfolioRequest={jest.fn}
+        modalLoading={false}
+        searchedItem={mockCommercialPortfolio}
+        onClose={onClose}
+        id="0"
+      />,
     );
 
   return { renderComp };

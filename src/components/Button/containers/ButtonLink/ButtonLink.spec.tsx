@@ -1,9 +1,9 @@
-import { render, screen } from "@testing-library/react";
-import React from "react";
 import "@testing-library/jest-dom";
 
+import { render, screen } from "@testing-library/react";
+import { lightMain } from "@themes/main";
+import React from "react";
 import { ThemeProvider } from "styled-components";
-import { lightMain } from "themes/main";
 
 import ButtonLink from "./ButtonLink";
 

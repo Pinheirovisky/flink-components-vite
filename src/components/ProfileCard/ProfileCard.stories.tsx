@@ -1,6 +1,5 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta,ComponentStory } from "@storybook/react";
 import React from "react";
-
 import { ThemeProvider } from "styled-components";
 
 import { darkMain, lightMain } from "../../themes/main";
