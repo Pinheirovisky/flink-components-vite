@@ -1,7 +1,6 @@
 import { IconChevronFilled } from "@components/Icons";
 import { ThemeMiddleware } from "@middlewares";
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { BreadcrumbItem, Wrapper } from "./Breadcrumbs.styles";
 

@@ -1,8 +1,6 @@
-import { ComponentMeta,ComponentStory } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { ThemeProvider } from "styled-components";
 
-import { darkMain, lightMain } from "../../themes/main";
 import ProfileCard from "./ProfileCard";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

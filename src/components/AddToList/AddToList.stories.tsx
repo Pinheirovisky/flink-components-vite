@@ -1,9 +1,6 @@
 import { ComplementFieldType } from "@protocols/table";
-import { ComponentMeta,ComponentStory } from "@storybook/react";
-import React from "react";
-import { ThemeProvider } from "styled-components";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { darkMain, lightMain } from "../../themes/main";
 import AddToList from "./AddToList";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

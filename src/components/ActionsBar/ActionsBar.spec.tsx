@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 
-import { fireEvent,render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 
 import { ActionsBar } from "./index";
@@ -21,24 +21,19 @@ describe("Actions Bar test", () => {
     {
       label: "Button 1",
       disabled: false,
-      action: (): void => {
-        console.log("first");
-      },
+      action: jest.fn(),
     },
     {
       label: "Button 2",
       disabled: false,
-      action: (): void => {
-        console.log("second");
-      },
+      action: jest.fn(),
     },
   ];
 
   const uiClasses = "teste";
 
-  const { renderComp } = createSut(actions, uiClasses);
-
   it("should render the actions bar with two buttons: ", () => {
+    const { renderComp } = createSut(actions, uiClasses);
     renderComp();
 
     const firstButtonLabel = screen.getByText("Button 1");
@@ -49,6 +44,7 @@ describe("Actions Bar test", () => {
   });
 
   it('actions bar should have a className equals to "test": ', () => {
+    const { renderComp } = createSut(actions, uiClasses);
     renderComp();
 
     const actionsBar = screen.getByTestId("actions-bar");
@@ -56,9 +52,21 @@ describe("Actions Bar test", () => {
   });
 
   it("buttons should execute a function when clicked: ", () => {
-    renderComp();
+    const mockAction = jest.fn();
 
-    const consoleSpy = jest.spyOn(console, "log");
+    const ownActions = [
+      {
+        ...actions[0],
+        action: mockAction(),
+      },
+      {
+        ...actions[1],
+        action: mockAction(),
+      },
+    ];
+
+    const { renderComp } = createSut(ownActions, uiClasses);
+    renderComp();
 
     const firstButton = screen.getByText("Button 1");
     fireEvent.click(firstButton);
@@ -66,6 +74,6 @@ describe("Actions Bar test", () => {
     const secondButton = screen.getByText("Button 1");
     fireEvent.click(secondButton);
 
-    expect(consoleSpy).toHaveBeenCalledTimes(2);
+    expect(mockAction).toHaveBeenCalledTimes(2);
   });
 });
