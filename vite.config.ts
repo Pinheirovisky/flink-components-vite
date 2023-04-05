@@ -34,7 +34,7 @@ export default defineConfig((configEnv) => ({
   ],
   build: {
     lib: {
-      entry: resolve("src", "components/index.ts"),
+      entry: resolve("src", "index.ts"),
       name: "FlinkComponents",
       formats: ["es", "umd"],
       fileName: (format) => `flink-components.${format}.js`,
