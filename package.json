@@ -120,20 +120,7 @@
     "vite": "^3.1.0"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@mui/icons-material": "^5.10.6",
-    "@mui/material": "^5.11.14",
-    "@types/react": "^18.0.17",
-    "classnames": "^2.3.2",
-    "formik": "^2.2.9",
-    "js-cookie": "^3.0.1",
-    "lodash": "^4.17.21",
     "react": "16.8.0 || >=17.x",
-    "react-dom": "16.8.0 || >=17.x",
-    "react-modal": "^3.16.1",
-    "react-router-dom": "^6.10.0",
-    "styled-components": "^5.3.9",
-    "yup": "^1.0.2"
+    "react-dom": "16.8.0 || >=17.x"
   }
 }

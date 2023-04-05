@@ -29,7 +29,6 @@ export default defineConfig((configEnv) => ({
     }),
     dts({
       insertTypesEntry: true,
-      include: ["src/component/"],
     }),
   ],
   build: {
@@ -40,7 +39,36 @@ export default defineConfig((configEnv) => ({
       fileName: (format) => `flink-components.${format}.js`,
     },
     rollupOptions: {
-      external: [...Object.keys(packageJson.peerDependencies)],
+      external: [
+        "react",
+        "react-dom",
+        "styled-components",
+        "lodash",
+        "classnames",
+        "@mui/icons-material",
+        "@mui/material",
+        "yup",
+        "formik",
+        "react-router-dom",
+        "react-modal",
+        "js-cookie",
+      ],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "styled-components": "styled",
+          lodash: "lodash",
+          classnames: "classnames",
+          "@mui/icons-material": "@mui/icons-material",
+          "@mui/material": "@mui/material",
+          yup: "yup",
+          formik: "formik",
+          "react-router-dom": "react-router-dom",
+          "react-modal": "react-modal",
+          "js-cookie": "js-cookie",
+        },
+      },
     },
   },
 }));
