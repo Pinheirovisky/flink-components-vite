@@ -26,13 +26,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/react-vite-library.es.js",
-      "require": "./dist/react-vite-library.umd.js"
+      "import": "./dist/flink-components.es.js",
+      "require": "./dist/flink-components.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
-  "main": "./dist/react-vite-library.umd.js",
-  "module": "./dist/react-vite-library.es.js",
+  "main": "./dist/flink-components.umd.js",
+  "module": "./dist/flink-components.es.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
     "classnames": "^2.3.2",
