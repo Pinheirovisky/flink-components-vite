@@ -28,6 +28,7 @@ export default defineConfig((configEnv) => ({
       linters: [new EsLinter({ configEnv })],
     }),
     dts({
+      insertTypesEntry: true,
       include: ["src/component/"],
     }),
   ],
