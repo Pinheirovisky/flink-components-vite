@@ -19,7 +19,7 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "react-vite-library": ["src/component/index.ts"],
+      "flink-components": ["src/component/index.ts"],
       "@components/*": ["src/components/*"],
       "@components": ["src/components"],
       "@middlewares/*": ["src/middlewares/*"],
