@@ -1,9 +1,10 @@
 import "@testing-library/jest-dom";
 
-import { mockCommercialPortfolio } from "@mocks";
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
+
+import { mockCommercialPortfolio } from "mocks";
 
 import { BusinessUnitsModal } from "./index";
 

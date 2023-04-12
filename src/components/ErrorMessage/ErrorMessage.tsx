@@ -1,5 +1,6 @@
-import { ThemeMiddleware } from "@middlewares";
 import React from "react";
+
+import { ThemeMiddleware } from "middlewares";
 
 import Wrapper from "./ErrorMessage.styles";
 

@@ -88,4 +88,4 @@ const Exit = styled.div`
 `;
 
 export default Wrapper;
-export { AvatarGroup, AvatarName, Exit, ProfileInfo,Separator };
+export { AvatarGroup, AvatarName, Exit, ProfileInfo, Separator };

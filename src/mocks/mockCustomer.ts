@@ -1,4 +1,4 @@
-import { Customers } from "@protocols/customers";
+import { Customers } from "protocols/customers";
 
 const mockCustomer: Customers = {
   id: 1,

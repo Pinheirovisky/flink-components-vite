@@ -3,47 +3,67 @@
     "browser": true,
     "es2021": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:prettier/recommended",
+    "ts-react-important-stuff"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.json",
+    "sourceType": "module",
     "ecmaFeatures": {
-      "tsx": true
-    },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+      "jsx": true
+    }
   },
   "plugins": [
     "react",
     "@typescript-eslint",
-    "react-hooks",
-    "prettier",
-    "simple-import-sort"
+    "eslint-plugin-import-helpers",
+    "react-hooks"
   ],
   "rules": {
-    "camelcase": "error",
-    "no-duplicate-imports": "error",
-    "@typescript-eslint/ban-ts-comment": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "react/react-in-jsx-scope": "off",
-    "no-console": "error",
-    "no-alert": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",
-    "react/prop-types": 0,
-    "react/display-name": 0,
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "@typescript-eslint/no-empty-function": "off",
-    "react/no-unknown-property": "off",
-    "react/no-unescaped-entities ": "off"
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/react/",
+          "module",
+          "/^store/",
+          "/^template/",
+          "/^protocols/",
+          "/^containers/",
+          "/^components/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
   }
 }

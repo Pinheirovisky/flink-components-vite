@@ -1,6 +1,7 @@
-import { mockReferenceValue } from "@mocks";
-import { ComponentMeta,ComponentStory } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
+
+import { mockReferenceValue } from "mocks";
 
 import CheckboxGroupTable from "./CheckboxGroupTable";
 

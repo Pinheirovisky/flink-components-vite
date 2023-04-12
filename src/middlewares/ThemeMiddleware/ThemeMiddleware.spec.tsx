@@ -1,8 +1,9 @@
 import "@testing-library/jest-dom/extend-expect";
 
-import { ActionsBar } from "@components";
 import { render, screen } from "@testing-library/react";
 import React from "react";
+
+import { ActionsBar } from "components";
 
 const createSut = (theme: "light" | "dark") => {
   const renderComp = () =>

@@ -13,13 +13,6 @@ module.exports = {
   coverageDirectory: "coverage",
   moduleNameMapper: {
     ".(css|less|scss)$": "identity-obj-proxy",
-    "^@components(.*)$": "<rootDir>/src/components$1",
-    "^@middlewares(.*)$": "<rootDir>/src/middlewares$1",
-    "^@mocks(.*)$": "<rootDir>/src/mocks$1",
-    "^@protocols(.*)$": "<rootDir>/src/protocols$1",
-    "^@styles(.*)$": "<rootDir>/src/styles$1",
-    "^@themes(.*)$": "<rootDir>/src/themes$1",
-    "^@utils(.*)$": "<rootDir>/src/utils$1",
   },
   coverageThreshold: {
     global: {

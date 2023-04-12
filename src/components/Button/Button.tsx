@@ -1,6 +1,7 @@
-import { ThemeMiddleware } from "@middlewares";
-import classnames from "classnames";
 import React from "react";
+
+import classnames from "classnames";
+import { ThemeMiddleware } from "middlewares";
 
 import ButtonStyles, { ButtonComponent } from "./Button.styles";
 import { ButtonLink } from "./containers/ButtonLink";

@@ -1,5 +1,5 @@
-import { FormalizationModal } from "@protocols/formalization";
-import { GetListResponse } from "@protocols/sharedProtocols";
+import { FormalizationModal } from "protocols/formalization";
+import { GetListResponse } from "protocols/sharedProtocols";
 
 // Interface:
 const mockFormalization: GetListResponse<FormalizationModal> = {

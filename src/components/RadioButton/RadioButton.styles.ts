@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface RadioStylesProps {
   containerTheme: string;
@@ -20,7 +20,7 @@ export const RadioLabel = styled.label<RadioStylesProps>`
 
   .children-text {
     color: ${({ containerTheme }) =>
-      containerTheme === 'light' ? '#0074C0' : '#FFFFFF'};
+      containerTheme === "light" ? "#0074C0" : "#FFFFFF"};
     font-family: ${({ theme }) => theme.fonts.fontFamily.main};
     font-size: ${({ theme }) => theme.fonts.fontSize.sm};
   }
@@ -36,7 +36,7 @@ export const RadioMarker = styled.span<RadioStylesProps>`
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid
     ${({ containerTheme }) =>
-      containerTheme === 'light' ? '#0074C0' : '#FFFFFF'};
+      containerTheme === "light" ? "#0074C0" : "#FFFFFF"};
 
   .marker-indicator {
     width: 100%;
@@ -59,7 +59,7 @@ export const RadioInput = styled.input<RadioStylesProps>`
     & ~ ${RadioMarker} {
       .marker-indicator {
         background: ${({ containerTheme }) =>
-          containerTheme === 'light' ? '#0074C0' : '#FFFFFF'};
+          containerTheme === "light" ? "#0074C0" : "#FFFFFF"};
       }
     }
   }

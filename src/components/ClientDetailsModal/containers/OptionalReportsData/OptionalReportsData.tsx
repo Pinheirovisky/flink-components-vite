@@ -1,12 +1,16 @@
+import React from "react";
+
+import { getReadableItem } from "utils";
+
+import { Customers } from "protocols/customers";
+
 import {
   Fieldname,
   Fieldvalue,
   Item,
-} from "@components/ClientDetailsModal/ClientDetailsModal.styles";
-import { Customers } from "@protocols/customers";
+} from "components/ClientDetailsModal/ClientDetailsModal.styles";
 // Utils:
-import { getReadableItem } from "@utils";
-import React from "react";
+
 interface OptionalReportsDataProps {
   customerData: Customers;
 }

@@ -5,19 +5,16 @@ import dts from "vite-plugin-dts";
 import EsLint from "vite-plugin-linter";
 import tsConfigPaths from "vite-tsconfig-paths";
 const { EsLinter, linterPlugin } = EsLint;
-import * as packageJson from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig((configEnv) => ({
   resolve: {
     alias: {
-      "@components/*": resolve(__dirname, "src/components/*"),
-      "@middlewares/*": resolve(__dirname, "src/middlewares/*"),
-      "@mocks/*": resolve(__dirname, "src/mocks/*"),
-      "@protocols/*": resolve(__dirname, "src/protocols/*"),
-      "@styles/*": resolve(__dirname, "src/styles/*"),
-      "@themes/*": resolve(__dirname, "src/themes/*"),
-      "@utils/*": resolve(__dirname, "src/utils/*"),
+      "core-js/modules": resolve(
+        __dirname,
+        "..",
+        "node_modules/core-js/modules",
+      ),
     },
   },
   plugins: [

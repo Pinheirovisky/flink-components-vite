@@ -1,6 +1,8 @@
-import { IconChevronFilled } from "@components/Icons";
-import { ThemeMiddleware } from "@middlewares";
 import React from "react";
+
+import { ThemeMiddleware } from "middlewares";
+
+import { IconChevronFilled } from "components/Icons";
 
 import { BreadcrumbItem, Wrapper } from "./Breadcrumbs.styles";
 

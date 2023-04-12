@@ -1,7 +1,9 @@
-import { mockReferenceValue } from "@mocks";
-import { ReferenceValueProps } from "@protocols/referenceValue";
 import { render } from "@testing-library/react";
 import React from "react";
+
+import { mockReferenceValue } from "mocks";
+
+import { ReferenceValueProps } from "protocols/referenceValue";
 
 import { CheckboxGroupTable } from "./index";
 

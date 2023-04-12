@@ -1,11 +1,14 @@
+import React from "react";
+
+import { getReadableItem } from "utils";
+
+import { Customers } from "protocols/customers";
+
 import {
   Fieldname,
   Fieldvalue,
   Item,
-} from "@components/ClientDetailsModal/ClientDetailsModal.styles";
-import { Customers } from "@protocols/customers";
-import { getReadableItem } from "@utils";
-import React from "react";
+} from "components/ClientDetailsModal/ClientDetailsModal.styles";
 
 interface OptionalInfoDataProps {
   customerData: Customers;

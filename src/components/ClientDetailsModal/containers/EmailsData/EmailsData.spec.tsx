@@ -1,11 +1,13 @@
 import "@testing-library/jest-dom";
 
-import { mockCustomer } from "@mocks";
-import { Customers } from "@protocols/customers";
 import { render, screen } from "@testing-library/react";
-import { lightMain } from "@themes/main";
 import React from "react";
+
+import { mockCustomer } from "mocks";
 import { ThemeProvider } from "styled-components";
+import { lightMain } from "themes/main";
+
+import { Customers } from "protocols/customers";
 
 import EmailsData from "./EmailsData";
 

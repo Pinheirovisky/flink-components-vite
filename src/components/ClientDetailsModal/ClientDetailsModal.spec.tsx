@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import "@testing-library/jest-dom";
 
-import { mockCustomer } from "@mocks";
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
+
+import { mockCustomer } from "mocks";
 
 import { ClientDetailsModal } from "./index";
 

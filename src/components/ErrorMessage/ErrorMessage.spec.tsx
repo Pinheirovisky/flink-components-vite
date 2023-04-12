@@ -1,8 +1,9 @@
 import "@testing-library/jest-dom";
 
 import { render, screen } from "@testing-library/react";
-import { lightMain } from "@themes/main";
 import React from "react";
+
+import { lightMain } from "themes/main";
 
 import { ErrorMessage } from "./index";
 

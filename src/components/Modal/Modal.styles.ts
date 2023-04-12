@@ -1,4 +1,5 @@
 import Modal from "react-modal";
+
 import styled from "styled-components";
 
 const Wrapper = styled(Modal)`

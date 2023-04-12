@@ -1,7 +1,10 @@
-import { Loading, Modal, Pagination } from "@components";
-import { ThemeMiddleware } from "@middlewares";
-import { CommercialPortfolioSearchedItem } from "@protocols/commercialPortfolio";
 import React, { useEffect, useState } from "react";
+
+import { ThemeMiddleware } from "middlewares";
+
+import { CommercialPortfolioSearchedItem } from "protocols/commercialPortfolio";
+
+import { Loading, Modal, Pagination } from "components";
 
 import Wrapper, { Content, TableWrapper } from "./BusinessUnitsModal.styles";
 import { Tbody } from "./containers";

@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { darkMain } from "@themes/main";
 import React from "react";
+
 // Theme:
 import { ThemeProvider } from "styled-components";
+import { darkMain } from "themes/main";
 
 import IconFilter from "./IconFilter";
 

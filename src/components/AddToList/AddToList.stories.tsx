@@ -1,5 +1,7 @@
-import { ComplementFieldType } from "@protocols/table";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
+
+import { ComplementFieldType } from "protocols/table";
 
 import AddToList from "./AddToList";
 

@@ -1,4 +1,4 @@
-import { CitiesProps } from "@protocols/places";
+import { CitiesProps } from "protocols/places";
 
 const mockCities: CitiesProps = {
   id: "3543402",

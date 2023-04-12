@@ -1,4 +1,4 @@
-import { readbleArray } from "@utils/arrays";
+import { readbleArray } from "utils/arrays";
 
 // ? Get key and return a readable item:
 const getReadableItem = (value: string): string => {

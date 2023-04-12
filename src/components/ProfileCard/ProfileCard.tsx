@@ -1,11 +1,13 @@
-import { IconChevron } from "@components/Icons";
-import { ThemeMiddleware } from "@middlewares";
+import React from "react";
+
 import { AccountCircle } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
-import { lightMain } from "@themes/main";
-import { clearLocalStorage } from "@utils";
 import classnames from "classnames";
-import React from "react";
+import { ThemeMiddleware } from "middlewares";
+import { lightMain } from "themes/main";
+import { clearLocalStorage } from "utils";
+
+import { IconChevron } from "components/Icons";
 
 import Wrapper, {
   AvatarGroup,

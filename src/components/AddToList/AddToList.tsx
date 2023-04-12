@@ -1,6 +1,8 @@
-import { ThemeMiddleware } from "@middlewares";
-import { ComplementFieldType } from "@protocols/table";
 import React, { useEffect, useRef, useState } from "react";
+
+import { ThemeMiddleware } from "middlewares";
+
+import { ComplementFieldType } from "protocols/table";
 
 import { ErrorMessage } from "../ErrorMessage";
 import { IconMinus, IconPlusRounded } from "../Icons";
